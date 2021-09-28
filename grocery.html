@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/grocery.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ShopNow</title>
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md bg-secondary sticky-top navbar-dark px-lg-5">
+      <a class="navbar-brand text-white" href="index.html"
+        ><span><i class="fas fa-shopping-cart mr-2"></i></span>
+        <span>Volver</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a
+              class="nav-link text-white btn"
+              id="cart"
+              type="button"
+              data-toggle="modal"
+              data-target="#cartModal"
+              onclick="printCart()"
+              ><i class="fas fa-cart-arrow-down"></i> My Cart</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- header  -->
+    <header class="masthead mb-5">
+      <div class="container position-relative">
+        <div class="row justify-content-center">
+          <div class="col-xl-6">
+            <div class="text-center text-white">
+              <!-- Page heading-->
+              <h1 class="mb-5">Welcome to ShopNow</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Grocery part -->
+    <section id="grocery" class="mb-5">
+      <div>
+        <h2 class="text-center mt-5 mb-3 p-3 bg-light">
+          <i class="fas fa-shopping-basket mr-2"></i>Grocery
+        </h2>
+      </div>
+      <div class="row m-3 justify-content-around">
+        <div class="col-sm-5 col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/products/pexels-pixabay-33783.jpg" alt="" />
+              <span class="badge badge-danger w-100 discount"></span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">cooking oil</h5>
+              <h1 class="card-text">$10.5</h1>
+              <button
+                type="button"
+                onclick="addToCart(1)"
+                class="btn btn-primary"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/products/pexels-valeria-la-terra-4699965.jpg" alt="" />
+              <span class="badge badge-danger w-100 discount"></span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">pasta</h5>
+              <h1 class="card-text">$6.25</h1>
+              <button
+                type="button"
+                onclick="addToCart(2)"
+                class="btn btn-primary"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/products/pexels-monstera-7144905.jpg" alt="" />
+              <span class="badge badge-danger w-100 discount"></span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Instant cupcake mixture</h5>
+              <h1 class="card-text">$15</h1>
+              <button
+                type="button"
+                onclick="addToCart(3)"
+                class="btn btn-primary"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- beauty part -->
+    <section id="beauty" class="mb-5">
+      <h2 class="text-center mt-3 p-3 bg-light"><i class="fas fa-heart mr-2"></i>Beauty</h2>
+      <div class="row m-3 justify-content-around">
+        <div class="col-sm-5 col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/products/pexels-rachel-claire-5490778.jpg" alt="" />
+              <span class="badge badge-danger w-100 discount"></span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">All-in-1</h5>
+              <h1 class="card-text">$260</h1>
+              <button
+                type="button"
+                onclick="addToCart(4)"
+                class="btn btn-primary"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/products/pexels-cottonbro-4620873.jpg" alt="" />
+              <span class="badge badge-danger w-100 discount"></span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Zero makeup kit</h5>
+              <h1 class="card-text">$15</h1>
+              <button
+                type="button"
+                onclick="addToCart(5)"
+                class="btn btn-primary"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/products/pexels-dids-1625037.jpg" alt="" />
+              <span class="badge badge-danger w-100 discount"></span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Lip tints</h5>
+              <h1 class="card-text">$12.75</h1>
+              <button
+                type="button"
+                onclick="addToCart(6)"
+                class="btn btn-primary"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- clothes part -->
+    <section id="clothes" class="mb-5">
+      <h2 class="text-center mt-3 p-3 bg-light"><i class="fas fa-tshirt mr-2"></i>Clothes</h2>
+      <div  class="row m-3 justify-content-around">
+        <div class="col-sm-5 col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/products/pexels-misha-voguel-7421925.jpg" alt="" />
+              <span class="badge badge-danger w-100 discount"></span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Lawn dress</h5>
+              <h1 class="card-text">$15</h1>
+              <button
+                type="button"
+                onclick="addToCart(7)"
+                class="btn btn-primary"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/products/pexels-tetyana-kovyrina-1879288.jpg" alt="" />
+              <span class="badge badge-danger w-100 discount"></span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Lawn-chiffon combo</h5>
+              <h1 class="card-text">$19.99</h1>
+              <button
+                type="button"
+                onclick="addToCart(8)"
+                class="btn btn-primary"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/products/pexels-pavel-danilyuk-6999299.jpg" alt="" />
+              <span class="badge badge-danger w-100 discount"></span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Toddler Frock</h5>
+              <h1 class="card-text">$9.99</h1>
+              <button
+                type="button"
+                onclick="addToCart(9)"
+                class="btn btn-primary"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- books part -->
+    <section id="books" class="mb-5">
+      <h2 class="text-center mt-3 p-3 bg-light"><i class="fas fa-book mr-2"></i>Books</h2>
+      <div  class="row m-3 justify-content-around">
+        <div class="col-sm-5 col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/products/pexels-maël-balland-3457273.jpg" alt="" />
+              <span class="badge badge-danger w-100 discount"></span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Bestsellers</h5>
+              <h1 class="card-text">$30</h1>
+              <button
+                type="button"
+                onclick="addToCart(10)"
+                class="btn btn-primary"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/products/pexels-leah-kelley-373465.jpg" alt="" />
+              <span class="badge badge-danger w-100 discount"></span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Kids</h5>
+              <h1 class="card-text">$10</h1>
+              <button
+                type="button"
+                onclick="addToCart(11)"
+                class="btn btn-primary"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/products/pexels-cottonbro-4904563.jpg" alt="" />
+              <span class="badge badge-danger w-100 discount"></span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Sci-fi</h5>
+              <h1 class="card-text">$12</h1>
+              <button
+                type="button"
+                onclick="addToCart(12)"
+                class="btn btn-primary"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- technology part -->
+    <section id="technology" class="mb-5">
+      <h2 class="text-center mt-3 p-3 bg-light"><i class="fas fa-mobile-alt mr-2"></i>Technology</h2>
+      <div  class="row m-3 justify-content-around">
+        <div class="col-sm-5 col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/products/pexels-math-249324.jpg" alt="" />
+              <span class="badge badge-danger w-100 discount"></span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Mobil</h5>
+              <h1 class="card-text">$150</h1>
+              <button
+                type="button"
+                onclick="addToCart(13)"
+                class="btn btn-primary"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/products/pexels-pixabay-221185.jpg" alt="" />
+              <span class="badge badge-danger w-100 discount"></span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Tablet</h5>
+              <h1 class="card-text">$300</h1>
+              <button
+                type="button"
+                onclick="addToCart(14)"
+                class="btn btn-primary"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/products/pexels-tranmautritam-326501.jpg" alt="" />
+              <span class="badge badge-danger w-100 discount"></span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Desktop screen</h5>
+              <h1 class="card-text">$120</h1>
+              <button
+                type="button"
+                onclick="addToCart(15)"
+                class="btn btn-primary"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- sports part -->
+    <section id="sports" class="mb-5">
+      <h2 class="text-center mt-3 p-3 bg-light"><i class="fas fa-basketball-ball mr-2"></i>Sports</h2>
+      <div  class="row m-3 justify-content-around">
+        <div class="col-sm-5 col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/products/pexels-pixabay-163491.jpg" alt="" />
+              <span class="badge badge-danger w-100 discount"></span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Bike</h5>
+              <h1 class="card-text">$180</h1>
+              <button
+                type="button"
+                onclick="addToCart(16)"
+                class="btn btn-primary"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/products/pexels-anna-shvets-5069176.jpg" alt="" />
+              <span class="badge badge-danger w-100 discount"></span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Tennis kit</h5>
+              <h1 class="card-text">$50</h1>
+              <button
+                type="button"
+                onclick="addToCart(17)"
+                class="btn btn-primary"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-lg-4 mb-4">
+          <div class="card">
+            <div class="card-image">
+              <img src="./images/products/pexels-pixabay-47354.jpg" alt="" />
+              <span class="badge badge-danger w-100 discount"></span>
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Soccer ball</h5>
+              <h1 class="card-text">$99.99</h1>
+              <button
+                type="button"
+                onclick="addToCart(18)"
+                class="btn btn-primary"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
+                    <ul class="list-inline mb-2">
+                        <li class="list-inline-item"><a href="#!">About</a></li>
+                        <li class="list-inline-item">⋅</li>
+                        <li class="list-inline-item"><a href="#!">Contact</a></li>
+                        <li class="list-inline-item">⋅</li>
+                        <li class="list-inline-item"><a href="#!">Terms of Use</a></li>
+                        <li class="list-inline-item">⋅</li>
+                        <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
+                    </ul>
+                    <p class="text-muted small mb-4 mb-lg-0">&copy; ShopNow 2021. All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item me-4">
+                            <a href="#!"><i class="fab fa-facebook-square fa-2x"></i></i></a>
+                        </li>
+                        <li class="list-inline-item me-4">
+                            <a href="#!"><i class="fab fa-twitter fa-2x"></i></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#!"><i class="fab fa-instagram fa-2x"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- modal -->
+    <aside>
+      <div
+        class="modal fade"
+        id="cartModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="cartModalTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="cartModalScrollableTitle">
+                <i class="fas fa-cart-arrow-down"></i>My Cart
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- listing items starts -->
+              <div>
+                <table class="table table-hover" id="items">
+                <table/>
+                <table class="table" id="table">
+                </table>
+                <div class="text-center">
+                  <a href="checkout.html" class="btn btn-primary m-3"
+                    >Checkout</a
+                  >
+                  <button type="button" class="btn btn-primary" id="clean">
+                    Clean Cart
+                  </button>
+                </div>
+              </div>
+              <!-- listing items ends -->
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- script tags -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/grocery.js"></script>
+  </body>
+</html>

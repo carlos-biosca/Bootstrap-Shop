@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+body {
+  font-family: Poppins;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+#errorPassword,
+#errorName,
+#errorPhone,
+#errorEmail,
+#errorAddress,
+#errorLastname {
+  display: none;
+  min-width: 200px;
+  color: red;
+}
+
+.border--valid {
+  border: 2px solid green;
+}
+
+.border--error {
+  border: 2px red solid;
+}
+
+.show--error {
+  display: block !important;
+}
+
+.message {
+  opacity: 0;
+}
+
+.valid {
+  opacity: 1;
+}
+
+/* footer  */
+footer.footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* tablet  */
+@media (min-width: 576px) {
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* laptop */
+@media (min-width: 992px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* desktop */
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
