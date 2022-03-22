@@ -4,6 +4,7 @@ body {
   font-family: Poppins;
   font-size: 10px;
 }
+
 ul {
   padding-left: 0;
   list-style-type: none;
@@ -13,13 +14,32 @@ ul {
 .navbar {
   background-color: rgb(43, 43, 43) !important;
 }
+
 .nav-link {
   color: rgb(255, 255, 255);
   font-size: 20px;
   font-weight: bold;
 }
+
 .nav-link:hover {
   color: white;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-counter {
+  min-height: 30px;
+  min-width: 30px;
+  margin-right: 10px;
+  padding: 0.2em 0.5em 0;
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1.05rem;
 }
 
 .price {
@@ -107,6 +127,10 @@ footer.footer {
 @media (min-width: 576px) {
   body {
     font-size: 16px;
+  }
+
+  .nav-counter {
+    margin-right: 0;
   }
 }
 

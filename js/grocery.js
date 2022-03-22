@@ -1,6 +1,7 @@
 const clean = document.getElementById('clean')
 const items = document.getElementById('items')
 const table = document.getElementById('table')
+const counter = document.getElementById('counter')
 
 var products = [
     {
@@ -142,6 +143,10 @@ var subtotal = {
 };
 var total = 0;
 
+function updateCartCounter () {
+    counter.innerHTML = cartList.length
+}
+
 
 function addToCartList (id) {
     // Añade producto a cartList 
@@ -152,7 +157,7 @@ function addToCartList (id) {
             calculateSubtotals()
         }
     }
-
+    updateCartCounter()
 }
 
 
@@ -163,6 +168,7 @@ function cleanCart () {
     cart = []
     calculateSubtotals()
     printCart()
+    updateCartCounter()
 }
 
 
@@ -271,6 +277,7 @@ function removeFromCart (id) {
             applyPromotionsCart(item)
         }
     }
+    updateCartCounter()
 }
 
 function removeFromCartList (name) {
