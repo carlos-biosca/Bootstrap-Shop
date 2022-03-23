@@ -183,7 +183,7 @@ function calculateSubtotals () {
         subtotal[product.type].value += product.price
     }
     for (let category in subtotal) {
-        subtotal[category].value = subtotal[category].value.toFixed(2)
+        subtotal[category].value = subtotal[category].value
     }
 
     applyPromotionsSubtotals()
@@ -197,7 +197,6 @@ function calculateTotal () {
     for (const category in subtotal) {
         total += subtotal[category].value - subtotal[category].discount
     }
-    total = total.toFixed(2)
 }
 
 
@@ -212,7 +211,7 @@ function applyPromotionsSubtotals () {
             }
             if (count >= product.offer.number) {
                 subtotal[product.type].discount += count * (product.price * product.offer.percent / 100)
-                subtotal[product.type].discount = subtotal[product.type].discount.toFixed(2)
+                subtotal[product.type].discount = subtotal[product.type].discount
             }
         }
     }
@@ -414,11 +413,11 @@ function printBodyCategories () {
         th.classList.add('text-capitalize')
         th.textContent = type
         const value = document.createElement('td')
-        value.textContent = `$${subtotal[type].value}`
+        value.textContent = `$${subtotal[type].value.toFixed(2)}`
         const discount = document.createElement('td')
-        discount.textContent = `-$${subtotal[type].discount}`
+        discount.textContent = `-$${subtotal[type].discount.toFixed(2)}`
         const valuediscount = document.createElement('td')
-        const rest = parseFloat(subtotal[type].value - subtotal[type].discount).toFixed(2)
+        const rest = (subtotal[type].value - subtotal[type].discount).toFixed(2)
         valuediscount.textContent = `$${rest}`
 
         tr.appendChild(th)
@@ -436,7 +435,7 @@ function printBodyCategories () {
     thtotal.classList.add('text-right')
     thtotal.textContent = 'TOTAL PRICE'
     const tdtotal = document.createElement('td')
-    tdtotal.textContent = `$${total}`
+    tdtotal.textContent = `$${total.toFixed(2)}`
 
     trtotal.appendChild(thtotal)
     trtotal.appendChild(tdtotal)
