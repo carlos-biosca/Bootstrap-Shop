@@ -4,10 +4,10 @@ const message = document.getElementById('message')
 function validate (e) {
     // Valida todos los campos. Si todos son correctos muestra un mensaje.
     e.preventDefault()
-    for (let i = 0; i < form.length - 1; i++) {
+    for (let i = 0; i < form.length - 2; i++) {
         checkInput(form[i])
     }
-    for (let i = 0; i < form.length - 1; i++) {
+    for (let i = 0; i < form.length - 2; i++) {
         if (form[i].nextElementSibling.classList.contains('show--error')) {
             return
         }

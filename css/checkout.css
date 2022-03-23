@@ -39,6 +39,13 @@ h2 {
   opacity: 1;
 }
 
+.cancel,
+.cancel:visited,
+.cancel:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
 /* footer  */
 footer.footer {
   padding-top: 4rem;

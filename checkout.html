@@ -60,14 +60,7 @@
     <!-- Checkout starts here -->
     <form class="form">
       <div
-        class="
-          row
-          bord
-          p-4 p-sm-4 p-lg-5
-          shadow
-          m-4 m-lg-5
-          justify-content-sm-between justify-content-xl-around
-        "
+        class="row bord p-4 p-sm-4 p-lg-5 shadow m-4 m-lg-5 justify-content-sm-between justify-content-xl-around"
       >
         <div class="col-sm-5">
           <div class="row align-items-center">
@@ -145,7 +138,12 @@
       </div>
       <!-- Checkout ends here -->
       <!-- Buy button -->
-      <div class="m-5 final text-right">
+      <div class="m-5 final d-flex justify-content-between">
+        <button class="p-2 px-4 btn btn-danger shadow-lg">
+          <a href="grocery.html" class="cancel">
+            <i class="fas fa-ban p-2 cancel"></i>Cancel
+          </a>
+        </button>
         <button
           type="submit"
           id="btn"
