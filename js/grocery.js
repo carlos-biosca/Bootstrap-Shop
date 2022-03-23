@@ -299,9 +299,9 @@ function printCart () {
 
     if (cart.length === 0) {
         const empty = document.createElement('td')
-        empty.classList.add('text-center', 'mx-auto', 'p-2', 'display-4')
+        empty.classList.add('text-center', 'mx-auto', 'pt-5', 'pb-0', 'display-4')
         empty.colSpan = 5
-        empty.textContent = 'Empty'
+        empty.textContent = 'EMPTY'
         items.appendChild(empty)
     } else {
         printHeadList()
